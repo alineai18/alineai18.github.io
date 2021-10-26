@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AAI</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+    a, #r {
+      color: #f0f;
+    }
+    input {
+      border: 1px solid #f0f;
+      padding: .15rem;
+    }
+    button {
+      background: #0f0;
+      border: 1px solid #0f0;
+      border-radius: 4px;
+      color: #000;
+      padding: .15rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aline Angela Ibers</h1>
+  <p>Hello! This is my website.</p>
+  <p>I'm learning to be a full stack developer with <a href="https://aplus-framework.com">Aplus Framework</a>.</p>
+  <hr>
+  <p>I like being called AAI. Can you call me?</p>
+  <form>
+    <label for="f">What do you want to do with me?</label>
+    <input name="f" id="f">
+    <button>Respond</button>
+  </form>
+  <p id="r">
+    <!-- Aai! Input f for me, baby! -->
+  </p>
+  <script>
+    let b = document.querySelector('button');
+    b.onclick = function(e) {
+      e.preventDefault();
+      let d = document.getElementById('f');
+      let r = document.getElementById('r');
+      let v = f.value;
+      if (v === '') {
+          v = 'love';
+      }
+      r.innerHTML = "🌈 OK! Let's " + v + ' after learning the <a href="https://aplus-framework.com">Aplus Framework</a>. Can I trust you, baby?';
+    };
+  </script>
+</body>
+</html>
