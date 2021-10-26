@@ -27,6 +27,15 @@
       cursor: pointer;
     }
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SXZQSH3MW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-8SXZQSH3MW');
+  </script>
 </head>
 <body>
   <h1>Aline Angela Ibers</h1>
@@ -36,23 +45,23 @@
   <p>I like being called AAI. Can you call me?</p>
   <form>
     <label for="f">What do you want to do with me?</label>
-    <input name="f" id="f">
+    <input id="f">
     <button>Respond</button>
   </form>
   <p id="r">
     <!-- Aai! Input f for me, baby! -->
-  </p>
-  <script>
+  </p>  
+  <script>    
     let b = document.querySelector('button');
     b.onclick = function(e) {
       e.preventDefault();
-      let d = document.getElementById('f');
       let r = document.getElementById('r');
       let v = f.value;
       if (v === '') {
           v = 'love';
       }
       r.innerHTML = "🌈 OK! Let's " + v + ' after learning the <a href="https://aplus-framework.com">Aplus Framework</a>. Can I trust you, baby?';
+      gtag('todo', v);
     };
   </script>
 </body>
